@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#74ebd5,#ACB6E5);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+form{
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    width:300px;
+}
+
+form div{
+    margin-bottom:15px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    margin-top:5px;
+    box-sizing:border-box;
+}
+
+input:focus{
+    border-color:#6c8cff;
+    outline:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    background:#6c8cff;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    background:#4e6ef2;
+}
+</style>
+</head>
+<body>
+
+	<form action="login_output.jsp" method="post">
+		<div>
+			<div>ID : <input type="text" name="id"></div>
+			<div>PW : <input type="password" name="pw"></div>
+			<div><button type="submit">login</button></div>				
+		</div>
+	</form>
+	
+
+</body>
+</html>

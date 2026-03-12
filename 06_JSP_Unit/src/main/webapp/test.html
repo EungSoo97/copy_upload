@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff');
+}
+
+body{
+   font-family: 'CookieRun-Regular', sans-serif;
+    background:#f4f6f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+body > div{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    width:280px;
+}
+
+body > div > div:first-child{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+form div{
+    font-weight:bold;
+    margin-top:10px;
+    margin-bottom:5px;
+    text-align:center;
+}
+
+input, select{
+    width:100%;
+    padding:8px;
+    margin-bottom:8px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    background:#4CAF50;
+    color:white;
+    font-size:15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#45a049;
+}
+
+.warn{
+    color:red;
+    font-size:12px;
+    margin-left:3px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+</style>
+
+</head>
+<body>
+	<!-- 1. 출력 페이지에서 소수점 한자리 까지
+		 2. 단위 정확하게 표시 
+		 3. 출력페이지 단위 별로 다른 디자인
+		 4. css 디자인 자유롭게 (봐줄만 하게)
+		 5. 입력할 때 공백 안되게 @ 숫자만 입력하도록 유효성 검사
+		 6. @ 1개 이상의 외부 폰트 적용		 
+		 	-->
+	<div>
+		<div>단위 변환</div>
+		<form action="unit_output.jsp">
+			<div>변환할 값</div>
+			<input name="num" type="number" required> <span class="warn">숫자만 입력하세요 </span>
+			<div>단위</div>
+			<select name="unit" required>
+				<option style="font-weight: bold;" value="" disabled selected>단위를 선택하세요</option>
+				<option value="length">cm → inch</option>
+				<option value="area">㎡ → 평</option>
+				<option value="temp">&deg;C → &deg;F</option>
+				<option value="speed">km/h → mi/h</option>
+		
+			</select>
+			<button>변환</button>
+		</form>
+	</div>	
+	
+
+</body>
+</html>
